@@ -22,6 +22,7 @@
 * All keywords can be used as variables, rendering the function of the keyword inoperable
 * Like any keyword, you can try to set `null` like a variable, but the value will be trashed
 * Escape character in strings is `!`, but to escape `!` characters, you have to use `\`
+* Brackets are mirrored, e.g. `}])> <([{`
 
 * Strange automatic typecasting / overloading, e.g.
 	* `[] -> 0`
