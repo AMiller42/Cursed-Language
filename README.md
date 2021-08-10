@@ -39,7 +39,7 @@
 
 **Truth-Machine**
 
-`x<-in:x:x->out:`<br><br>
+`x<-in})x(x->out{`<br><br>
 
 **Cat Program**
 
