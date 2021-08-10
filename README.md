@@ -22,8 +22,8 @@
 * Arrays can have negative and fractional(?) indexes, and they're 1-indexed, i.e. `a"-2", a"-1", a"1", a"2"` will all work, but `a"0"` will just segfault
 * All keywords can be used as variables, rendering the function of the keyword inoperable
 * Like any keyword, you can try to set `null` like a variable, but the value will be trashed
-* Escape character in strings is `!`, but to escape `!` characters, you have to use `\`
-* Brackets are mirrored, e.g. `}])> <([{`
+* Escape character is `!`, but to escape `!` characters, you have to use `\`
+* Brackets are mirrored, e.g. `}]) ([{`
 
 * Strange automatic typecasting / overloading, e.g.
 	* `[] -> 0`
@@ -48,8 +48,6 @@
 **Define an Array of Strings**
 
 `"''Hello''|''World\!''"`
-
-
 
 
 
