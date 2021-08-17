@@ -1,6 +1,6 @@
 # Ｃｕｒｓｅｄ
 
-Try Ｃｕｒｓｅｄ out today in the [online interpreter](https://amiller42.github.io/Cursed-Language/)!
+Try Ｃｕｒｓｅｄ out today in the [online interpreter](https://amiller42.github.io/Cursed-Language/)! (Disclaimer: Doesn't work yet; it'll work tomorrow.)
 
 ## Confirmed <s>Bugs</s> Features
 
