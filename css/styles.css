@@ -23,3 +23,30 @@ button {
     overflow: visible;
     background-color: black;
 }
+
+#run {
+    animation-name: run_btn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+#link {
+    animation-name: link_btn;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in;
+}
+
+@keyframes run_btn {
+    from {width: 90px; height: 40px;}
+    to {width: 120px; height: 70px;}
+}
+
+@keyframes link_btn {
+    from {width: 90px; height: 40px;}
+    to {width: 120px; height: 70px;}
+}
