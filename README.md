@@ -1,5 +1,7 @@
 # Ｃｕｒｓｅｄ
 
+Try Ｃｕｒｓｅｄ out today in the [online interpreter](https://amiller42.github.io/Cursed-Language/)!
+
 ## Confirmed <s>Bugs</s> Features
 
 ***Note: Potential features / features with missing details are marked with `(?)`***
