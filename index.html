@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Ｃｕｒｓｅｄ interpreter</title>
+    <title>Ｃｕｒｓｅｄ interpreter</title>
 
-  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function resizeRainbow() { // The rainbow thing only works if there's extra space at the end of the div, so this resizes it.
+            let codebox = document.getElementById("codebox");
+            let rainBox = document.getElementById("rainbowBox");
+            let codeSize = codebox.scrollHeight;
+            
+            rainBox.style.height = codeSize + "px";
+        }
+        
+/*        function noBadHtml() {
+            let codebox = document.getElementById("codebox");
+            
+            codebox.innerHTML = codebox.innerText.split("\n").map((i) => i.replace(/^/, "<div>").replace(/$/, "</div>")).join("");
+        }
+        This works, but it moves the cursor to the beginning of the box every time you do anything, so I might come back
+        to it later if it becomes a pressing issue.
+*/
+    </script>
 </head>
 <body>
-    <p>
+    <div>
         <h1>
-            <marquee><div style="background: rgb(196, 247, 13);"><img src="./img/hacker.gif"></img>   WELCOME TO THE Ｃｕｒｓｅｄ INTERPRETER!   <img src="./img/hacker.gif"></img></div></marquee>
+            <marquee><span style="background: rgb(196, 247, 13);"><img src="./img/hacker.gif"></img>   WELCOME TO THE Ｃｕｒｓｅｄ INTERPRETER!   <img src="./img/hacker.gif"></img></span></marquee>
         </h1>
         <img src="./img/rainbow.gif" width=100%></img>
-    </p>
-    <p>
-        <button id="run"> Execute </button>
-        <button id="link"> Linkify </button>
+    </div>
+    <div class="buttons">
+        <div class="btn-box"><button id="run"> Execute </button></div>
+        <div class="btn-box"><button id="link"> Linkify </button></div>
         <br><br>
-    </p>
+    </div>
     <p>Code:</p>
-    <div contenteditable="true" id="codebox">Code goes here!</div>
+    <div class="rainbow" id="rainbowBox">
+        <div style="background-color: black;">
+            <div contenteditable="true" id="codebox" oninput="resizeRainbow();">Code goes here!</div>
+        </div>
+    </div>
 </body>
 </html>
