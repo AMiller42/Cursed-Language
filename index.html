@@ -11,13 +11,13 @@
             let codebox = document.getElementById("codebox");
             let rainBox = document.getElementById("rainbowBox");
             let codeSize = codebox.scrollHeight;
-            
+
             rainBox.style.height = codeSize + "px";
         }
-        
+
 /*        function noBadHtml() {
             let codebox = document.getElementById("codebox");
-            
+
             codebox.innerHTML = codebox.innerText.split("\n").map((i) => i.replace(/^/, "<div>").replace(/$/, "</div>")).join("");
         }
         This works, but it moves the cursor to the beginning of the box every time you do anything, so I might come back

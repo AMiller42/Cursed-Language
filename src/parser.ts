@@ -1,13 +1,10 @@
 import * as ast from './ast'
+import * as lexer from './lexer'
 
-export function tokenize(code: string): [ast.Token] {
-  return null //todo
-}
-
-function parseTokens(tokens: [ast.Token]): ast.AST {
+function parseTokens(tokens: lexer.Token[]): ast.AST {
   return null //todo
 }
 
 export function parse(code: string): ast.AST {
-  return parseTokens(tokenize(code))
+  return parseTokens(lexer.tokenise(code))
 }
