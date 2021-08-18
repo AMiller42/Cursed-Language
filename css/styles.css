@@ -10,12 +10,12 @@ h1 {
     color: red;
 }
 
-a {
+a:visited, a:link, a:hover {
     color: red;
     text-decoration: none;
 }
 
-p{
+p {
     color: white;
 }
 
