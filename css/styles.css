@@ -28,10 +28,6 @@ button {
     animation-timing-function: ease-in;
 }
 
-.buttons {
-    display: flex;
-}
-
 .btn-box {
     text-align: center;
     width: 110px;
@@ -39,20 +35,31 @@ button {
 }
 
 .rainbow {
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#buttons {
+    display: flex;
 }
 
 #codebox {
-    width: 100%;
+    width: 95%;
     height: 140px;
+    padding-top: 5px;
+    padding-left: 5px;
     overflow: visible;
     outline: none;
     color: transparent;
     background-color: rgb(196, 247, 13);
     -webkit-background-clip: text;
+    animation-name: textbox;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #run { 
@@ -67,4 +74,22 @@ button {
 @keyframes btn {
     from {width: 90px; height: 40px;}
     to {width: 100px; height: 50px;}
+}
+
+@keyframes textbox {
+    0% {
+        background-color: green;
+        line-height: 20px;
+        font-size: 16px;
+    }
+    50% {
+        background-color: gold;
+        line-height: 20px;
+        font-size: 20px;
+    }
+    100% {
+        background-color: hotpink;
+        line-height: 20px;
+        font-size: 16px;
+    }
 }
