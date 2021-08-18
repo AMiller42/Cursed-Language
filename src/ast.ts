@@ -1,3 +1,5 @@
+import { Token } from './lexer'
+
 export class AST {
 
 }
@@ -25,24 +27,4 @@ export class BoolLiteral extends Literal<boolean> { }
 
 export class VarRef {
     readonly token: Token
-}
-
-export class Token {
-    readonly text: string
-    readonly tokenType: TokenType
-}
-
-export enum TokenType {
-    STRING_LITERAL,
-    NUM_LITERAL,
-    IDENTIFIER,
-    OPERATOR,
-    OTHER,
-    LPAREN = "(",
-    RPAREN = ")",
-    GT = ">",
-    LT = "<",
-    EQGT = "=>",
-    LTEQ = "<=",
-    EQ = "="
 }
