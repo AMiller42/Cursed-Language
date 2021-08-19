@@ -1,15 +1,34 @@
-import * as interpreter from './dist/interpreter'
+// import * as interpreter from './dist/interpreter'
+// const interpreter = require('./dist/interpreter');
 
-function linkify(code, input, flags) {
-    const encodedFlags = `flags={encodeURIComponent(flags)}`;
-    const encodedInput = `input={encodeURIComponent(input)}`;
-    const encodedCode = `code={encodeURIComponent(code)}`;
+function getFlags() {
+    return [];
+}
+
+function getInputs() {
+    return [];
+}
+
+function getCode() {
+    return document.getElementById("codebox").firstChild.textContent;
+}
+
+function linkify() {
+    const flags = getFlags().join(" ");
+    const input = getInputs().join("\n");
+    const code = getCode();
+    const site = window.location.origin;
+    const encodedFlags = `flags=${encodeURIComponent(flags)}`;
+    const encodedInput = `input=${encodeURIComponent(input)}`;
+    const encodedCode = `code=${encodeURIComponent(code)}`;
     const link =
-        `{window.location.origin}/?{encodedFlags}&{encodedInput}&{encodedCode}`;
+        `${site}/?${encodedFlags}&${encodedInput}&${encodedCode}`;
     alert(link);
 }
 
-function execute(code, flags) {
+function execute() {
+    const flags = "";
+    const code = document.getElementById("codebox");
     const res = interpreter.interpret(code, flags);
     alert(res);
 }
