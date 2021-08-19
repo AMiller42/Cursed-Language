@@ -19,7 +19,7 @@ p {
     color: white;
 }
 
-button {
+.top-button {
     font-size: 16px;
     background-color: #ff00ff;
     width: 90px;
