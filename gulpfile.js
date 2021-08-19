@@ -1,5 +1,5 @@
 const gulp = require("gulp");
-const ts = require("gulp-typescript");
+// const ts = require("gulp-typescript");
 const browserify = require("browserify");
 const source = require("vinyl-source-stream");
 const buffer = require("vinyl-buffer");
@@ -7,7 +7,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const tsify = require("tsify");
 const minify = require("gulp-babel-minify");
 
-const tsProject = ts.createProject("tsconfig.json");
+// const tsProject = ts.createProject("tsconfig.json");
 
 gulp.task(
     "default",
@@ -15,7 +15,7 @@ gulp.task(
         return browserify({
                 basedir: ".",
                 debug: true,
-                entries: ["src/interpreter.ts"],
+                entries: ["src/index.ts"],
                 cache: {},
                 packageCache: {},
             })

@@ -1,11 +1,11 @@
 import * as ast from './ast'
 import { parse } from './parser'
 
-export function interpret(code: string, flags = {}) {
+export function interpret(code: string, inputs: string[] = [], flags: string[] = []) {
     let ast = parse(code)
-    execAST(ast, flags)
+    execAST(ast, inputs, flags)
 }
 
-function execAST(ast: ast.AST, flags = {}) {
+function execAST(ast: ast.AST, inputs: string[], flags: string[]) {
 
 }
