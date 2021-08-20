@@ -25,6 +25,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Format with Prettier
+      run: |
+        npm install prettier
+        npx prettier --write .
+
     - name: Build with webpack
       run: |
         npm install
