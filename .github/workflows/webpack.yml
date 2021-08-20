@@ -27,12 +27,11 @@ jobs:
 
     - name: Format with Prettier
       run: |
-        npm install prettier
+        npm install
         npx prettier --write .
 
     - name: Build with webpack
       run: |
-        npm install
         npx webpack --config webpack.config.js
 
     - name: Commit changes if any
