@@ -12,7 +12,7 @@ function getInputs(): string[] {
 }
 
 function getCode(): string {
-    return document.getElementById("codebox").firstChild.textContent;
+    return document.getElementById("codebox").innerText;
 }
 
 //From https://stackoverflow.com/a/35385518
@@ -28,11 +28,11 @@ export function linkify(): void {
     const flags = getFlags().join(" ");
     const input = getInputs().join("\n");
     const code = getCode();
-    const site = window.location.origin;
+    const site = window.location.origin + window.location.pathname;
     const encodedFlags = `flags=${encodeURIComponent(flags)}`;
     const encodedInput = `input=${encodeURIComponent(input)}`;
     const encodedCode = `code=${encodeURIComponent(code)}`;
-    const link = `${site}/?${encodedFlags}&${encodedInput}&${encodedCode}`;
+    const link = `${site}?${encodedFlags}&${encodedInput}&${encodedCode}`;
     alert(link);
 }
 

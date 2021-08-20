@@ -30,14 +30,15 @@
     <body>
         <div>
             <h1>
-                <marquee
-                    ><span style="background: rgb(196, 247, 13)"
-                        ><img src="./img/hacker.gif" /> WELCOME TO THE
+                <marquee>
+                    <span style="background: rgb(196, 247, 13)">
+                        <img src="./img/hacker.gif" /> WELCOME TO THE
                         <a href="https://github.com/AMiller42/Cursed-Language"
                             >Ｃｕｒｓｅｄ</a
                         >
-                        INTERPRETER! <img src="./img/hacker.gif" /></span
-                ></marquee>
+                        INTERPRETER! <img src="./img/hacker.gif" />
+                    </span>
+                </marquee>
             </h1>
             <img src="./img/rainbow.gif" width="100%" />
         </div>
@@ -65,13 +66,13 @@
         <p>Code:</p>
         <div class="rainbow" id="rainbowBox">
             <div style="background-color: black">
-                <textarea
+                <div
                     contenteditable="true"
                     id="codebox"
-                    oninput="this.innerHTML = this.value; resizeRainbow();"
+                    oninput="resizeRainbow();"
                 >
-Code goes here!</textarea
-                >
+                    Code goes here!
+                </div>
             </div>
         </div>
     </body>
