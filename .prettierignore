@@ -1,5 +1,6 @@
 dist
 node_modules
+.github
 gulpfile.js
 tsconfig.json
-.github
+README.md

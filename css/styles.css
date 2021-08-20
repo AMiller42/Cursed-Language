@@ -41,6 +41,14 @@ p {
     height: 75px;
 }
 
+.btn-box:hover {
+    animation-name: btn-wobble;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
 .rainbow {
     background-image: -webkit-gradient(
         linear,
@@ -116,5 +124,18 @@ p {
         background-color: hotpink;
         line-height: 20px;
         font-size: 16px;
+    }
+}
+
+@keyframes btn-wobble {
+    from {
+        width: 90px;
+        height: 40px;
+        -webkit-transform: rotate(12deg);
+    }
+    to {
+        width: 100px;
+        height: 50px;
+        -webkit-transform: rotate(-12deg);
     }
 }
