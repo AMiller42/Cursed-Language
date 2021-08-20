@@ -10,7 +10,9 @@ h1 {
     color: red;
 }
 
-a:visited, a:link, a:hover {
+a:visited,
+a:link,
+a:hover {
     color: red;
     text-decoration: none;
 }
@@ -26,7 +28,7 @@ p {
     height: 40px;
     color: white;
     cursor: pointer;
-    
+
     animation-name: btn;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -40,7 +42,19 @@ p {
 }
 
 .rainbow {
-    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0, #f22),
+        color-stop(0.15, #f2f),
+        color-stop(0.3, #22f),
+        color-stop(0.45, #2ff),
+        color-stop(0.6, #2f2),
+        color-stop(0.75, #2f2),
+        color-stop(0.9, #ff2),
+        color-stop(1, #f22)
+    );
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -67,7 +81,7 @@ p {
     animation-direction: alternate;
 }
 
-#run { 
+#run {
     animation-direction: alternate;
 }
 
@@ -77,8 +91,14 @@ p {
 }
 
 @keyframes btn {
-    from {width: 90px; height: 40px;}
-    to {width: 100px; height: 50px;}
+    from {
+        width: 90px;
+        height: 40px;
+    }
+    to {
+        width: 100px;
+        height: 50px;
+    }
 }
 
 @keyframes textbox {

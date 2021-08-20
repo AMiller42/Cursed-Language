@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8" />
 
-    <title>Ｃｕｒｓｅｄ interpreter</title>
+        <title>Ｃｕｒｓｅｄ interpreter</title>
 
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="dist/bundle.js"></script>
-    <script>
-        function resizeRainbow() { // The rainbow thing only works if there's extra space at the end of the div, so this resizes it.
-            let codebox = document.getElementById("codebox");
-            let rainBox = document.getElementById("rainbowBox");
-            let codeSize = codebox.scrollHeight;
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="dist/bundle.js"></script>
+        <script>
+            function resizeRainbow() {
+                // The rainbow thing only works if there's extra space at the end of the div, so this resizes it.
+                let codebox = document.getElementById("codebox");
+                let rainBox = document.getElementById("rainbowBox");
+                let codeSize = codebox.scrollHeight;
 
-            rainBox.style.height = codeSize + "px";
-        }
+                rainBox.style.height = codeSize + "px";
+            }
 
-/*        function noBadHtml() {
+            /*        function noBadHtml() {
             let codebox = document.getElementById("codebox");
 
             codebox.innerHTML = codebox.innerText.split("\n").map((i) => i.replace(/^/, "<div>").replace(/$/, "</div>")).join("");
@@ -24,27 +25,54 @@
         This works, but it moves the cursor to the beginning of the box every time you do anything, so I might come back
         to it later if it becomes a pressing issue.
 */
-    </script>
-</head>
-<body>
-    <div>
-        <h1>
-            <marquee><span style="background: rgb(196, 247, 13);"><img src="./img/hacker.gif"></img>   WELCOME TO THE <a href="https://github.com/AMiller42/Cursed-Language">Ｃｕｒｓｅｄ</a> INTERPRETER!   <img src="./img/hacker.gif"></img></span></marquee>
-        </h1>
-        <img src="./img/rainbow.gif" width=100%></img>
-    </div>
-    <div id="topbar">
-        <span id="buttons">
-            <div class="btn-box"><button id="run" class="top-button"> Execute </button></div>
-            <div class="btn-box"><button id="link" class="top-button"> Linkify </button></div>
-            <iframe src="https://john.mondecitronne.com/embed?ref=http://amiller42.github.io/Cursed-Language" style="margin-left:auto; display:block; max-width:732px; width:100%; height:94px; border:none;"></iframe>
-        </span>
-    </div>
-    <p>Code:</p>
-    <div class="rainbow" id="rainbowBox">
-        <div style="background-color: black;">
-            <div contenteditable="true" id="codebox" oninput="resizeRainbow();">Code goes here!</div>
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>
+                <marquee
+                    ><span style="background: rgb(196, 247, 13)"
+                        ><img src="./img/hacker.gif" /> WELCOME TO THE
+                        <a href="https://github.com/AMiller42/Cursed-Language"
+                            >Ｃｕｒｓｅｄ</a
+                        >
+                        INTERPRETER! <img src="./img/hacker.gif" /></span
+                ></marquee>
+            </h1>
+            <img src="./img/rainbow.gif" width="100%" />
         </div>
-    </div>
-</body>
+        <div id="topbar">
+            <span id="buttons">
+                <div class="btn-box">
+                    <button id="run" class="top-button">Execute</button>
+                </div>
+                <div class="btn-box">
+                    <button id="link" class="top-button">Linkify</button>
+                </div>
+                <iframe
+                    src="https://john.mondecitronne.com/embed?ref=http://amiller42.github.io/Cursed-Language"
+                    style="
+                        margin-left: auto;
+                        display: block;
+                        max-width: 732px;
+                        width: 100%;
+                        height: 94px;
+                        border: none;
+                    "
+                ></iframe>
+            </span>
+        </div>
+        <p>Code:</p>
+        <div class="rainbow" id="rainbowBox">
+            <div style="background-color: black">
+                <textarea
+                    contenteditable="true"
+                    id="codebox"
+                    oninput="this.innerHTML = this.value; resizeRainbow();"
+                >
+Code goes here!</textarea
+                >
+            </div>
+        </div>
+    </body>
 </html>

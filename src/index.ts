@@ -1,6 +1,6 @@
-import * as interpreter from './interpreter';
+import * as interpreter from "./interpreter";
 
-console.log('Here!')
+console.log("Here!");
 
 /******************************* BEGIN HELPERS *******************************/
 function getFlags(): string[] {
@@ -14,6 +14,14 @@ function getInputs(): string[] {
 function getCode(): string {
     return document.getElementById("codebox").firstChild.textContent;
 }
+
+//From https://stackoverflow.com/a/35385518
+function htmlToElement(html: string) {
+    const template = document.createElement("template");
+    html = html.trim(); // Never return a text node of whitespace as the result
+    template.innerHTML = html;
+    return template.content.firstChild;
+}
 /******************************** END HELPERS ********************************/
 
 export function linkify(): void {
@@ -24,8 +32,7 @@ export function linkify(): void {
     const encodedFlags = `flags=${encodeURIComponent(flags)}`;
     const encodedInput = `input=${encodeURIComponent(input)}`;
     const encodedCode = `code=${encodeURIComponent(code)}`;
-    const link =
-        `${site}/?${encodedFlags}&${encodedInput}&${encodedCode}`;
+    const link = `${site}/?${encodedFlags}&${encodedInput}&${encodedCode}`;
     alert(link);
 }
 
@@ -41,7 +48,7 @@ function popupJohnvertise() {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
 
-    console.log(screenHeight, screenWidth)
+    console.log(screenHeight, screenWidth);
 
     // set size of the popup with a random multiplier
     const adSize = 1.25 - Math.random();
@@ -56,23 +63,26 @@ function popupJohnvertise() {
     offsetX = adWidth >= screenWidth ? "" : `right:${offsetX}px;`;
 
     // spawn the ad
-    document.body.innerHTML += `
-<div style="position:fixed; top:${offsetY}px; ${offsetX} height:${adHeight}px; width:${adWidth}px;" id="popup">
-<img src="./img/x.gif" style="height: 12px; width: 12px; cursor:grab;" onclick="this.parentElement.remove();"></img>
-<iframe src="https://john.mondecitronne.com/embed?ref=http://amiller42.github.io/Cursed-Language" style="margin-left:auto; display:block; max-width:${adWidth}px; width:100%; height:${adHeight}px; border:none;"></iframe>
-</div>`;
+    const x = `<img src="./img/x.gif" style="height: 12px; width: 12px; cursor:grab;" onclick="this.parentElement.remove();"/>`;
+    const advert = `<iframe src="https://john.mondecitronne.com/embed?ref=http://amiller42.github.io/Cursed-Language"
+        style="margin-left:auto; display:block; max-width:${adWidth}px; width:100%; height:${adHeight}px; border:none;"
+    ></iframe>`;
+    const html = `<div style="position:fixed; top:${offsetY}px; ${offsetX} height:${adHeight}px; width:${adWidth}px;" id="popup">
+            ${x}${advert}
+        </div>`;
+    document.body.appendChild(htmlToElement(html));
 
     // wait anywhere from 15-90 seconds to spawn another popup
-    setTimeout(popupJohnvertise, Math.floor((Math.random() * 75000) + 15000));
+    setTimeout(popupJohnvertise, Math.floor(Math.random() * 75000 + 15000));
 }
 
 // wait anywhere from 2-10 seconds before the first popup
-setTimeout(popupJohnvertise, Math.floor((Math.random() * 8000) + 2000));
+setTimeout(popupJohnvertise, Math.floor(Math.random() * 8000 + 2000));
 
 //Set event listeners here because the functions can't be accessed from
 //the HTML directly for some reason.
 //TODO figure out a way to get around that ^
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener("DOMContentLoaded", (event) => {
     document.getElementById("run").onclick = execute;
     document.getElementById("link").onclick = linkify;
 });
