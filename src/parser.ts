@@ -57,7 +57,7 @@ function parseAny<T>(...parsers: Parser<T>[]): Parser<T> {
     return new Parser((tokens: Token[]) => {
         const msgs = [];
         for (const parser of parsers) {
-            console.log("Here, ", parser)
+            console.log("Here, ", parser);
             const res = parser.parse(tokens);
             //If this pattern matched, return its match
             if (res.ast !== null && res.ast !== undefined) {
@@ -108,8 +108,8 @@ const parseAssignStmt: Parser<ast.AssignStmt> = new Parser(
                 ),
             ]);
         }
-        console.log(`Tokens = ${tokens}`)
-        return new Res(tokens, [])
+        console.log(`Tokens = ${tokens}`);
+        return new Res(tokens, []);
     }
 );
 
