@@ -21,6 +21,19 @@ export class NumLiteral extends Literal<number> {}
 
 export class BoolLiteral extends Literal<boolean> {}
 
-export class VarRef {
+export class VarRef extends AST {
     readonly token: Token;
+}
+
+export class Stmt extends AST {}
+
+export class AssignStmt extends Stmt {
+    varName: string;
+    expr: Expr;
+
+    constructor(varName: string, expr: Expr) {
+        super();
+        this.varName = varName;
+        this.expr = expr;
+    }
 }

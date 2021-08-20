@@ -24,7 +24,7 @@ into a list of assuredly horrid tokens, ripe for the parsing.
    GENERAL
       Everything else, e.g. "}", "|", "+"
 */
-enum TokenType {
+export enum TokenType {
     STRING,
     NUMBER,
     VAR_SET,

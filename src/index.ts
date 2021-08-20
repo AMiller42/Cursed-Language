@@ -12,7 +12,7 @@ function getInputs(): string[] {
 }
 
 function getCode(): string {
-    return document.getElementById("codebox").firstChild.textContent;
+    return document.getElementById("codebox").textContent;
 }
 
 //From https://stackoverflow.com/a/35385518
