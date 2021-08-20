@@ -2,9 +2,9 @@
   "name": "cursed-language",
   "version": "0.1.0",
   "description": "Cursed language",
-  "main": "scripts/main.js",
+  "private": true,
   "scripts": {
-    "build": "tsc"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
