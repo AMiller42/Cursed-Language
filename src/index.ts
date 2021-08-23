@@ -39,14 +39,11 @@ export function linkify(): void {
     if (response === "yez plez") {
         navigator.clipboard.writeText(link).then(
             function () {
-                alert("Copied");
+                alert("Copied!");
             },
             function (err) {
                 alert(
-                    'Oof, no copy. Error:\n"' +
-                        err +
-                        "\"\n\nHere's the link, to manually copy:\n" +
-                        link
+                    `Here's the link to copy:\n${link}`
                 );
             }
         );
