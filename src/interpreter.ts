@@ -8,7 +8,7 @@ export function interpret(
 ) {
     let ast = parse(code);
     execAST(ast, inputs, flags);
-    
+
     return "Not done yet, you sussy baka!";
 }
 

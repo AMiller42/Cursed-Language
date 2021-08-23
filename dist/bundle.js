@@ -36,7 +36,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexpo
   \****************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.interpret = void 0;\nvar parser_1 = __webpack_require__(/*! ./parser */ \"./src/parser.ts\");\nfunction interpret(code, inputs, flags) {\n    if (inputs === void 0) { inputs = []; }\n    if (flags === void 0) { flags = []; }\n    var ast = parser_1.parse(code);\n    execAST(ast, inputs, flags);\n}\nexports.interpret = interpret;\nfunction execAST(ast, inputs, flags) { }\n\n\n//# sourceURL=webpack://cursed-language/./src/interpreter.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports.interpret = void 0;\nvar parser_1 = __webpack_require__(/*! ./parser */ \"./src/parser.ts\");\nfunction interpret(code, inputs, flags) {\n    if (inputs === void 0) { inputs = []; }\n    if (flags === void 0) { flags = []; }\n    var ast = parser_1.parse(code);\n    execAST(ast, inputs, flags);\n    return \"Not done yet, you sussy baka!\";\n}\nexports.interpret = interpret;\nfunction execAST(ast, inputs, flags) { }\n\n\n//# sourceURL=webpack://cursed-language/./src/interpreter.ts?");
 
 /***/ }),
 
