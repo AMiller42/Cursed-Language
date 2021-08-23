@@ -33,13 +33,23 @@ export function linkify(): void {
     const encodedInput = `input=${encodeURIComponent(input)}`;
     const encodedCode = `code=${encodeURIComponent(code)}`;
     const link = `${site}?${encodedFlags}&${encodedInput}&${encodedCode}`;
-    const response = prompt("Link\n created.\n  If\n   you\n    want\n     to\n      copy\n       the\n        link,\n         type\n          \"yez plez\"");
+    const response = prompt(
+        'Link\n created.\n  If\n   you\n    want\n     to\n      copy\n       the\n        link,\n         type\n          "yez plez"'
+    );
     if (response === "yez plez") {
-        navigator.clipboard.writeText(link).then(function() {
-          alert('Copied');
-        }, function(err) {
-          alert("Oof, no copy. Error:\n\"" + err + "\"\n\nHere's the link, to manually copy:\n" + link);
-        });
+        navigator.clipboard.writeText(link).then(
+            function () {
+                alert("Copied");
+            },
+            function (err) {
+                alert(
+                    'Oof, no copy. Error:\n"' +
+                        err +
+                        "\"\n\nHere's the link, to manually copy:\n" +
+                        link
+                );
+            }
+        );
     }
 }
 
