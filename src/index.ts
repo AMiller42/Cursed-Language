@@ -42,9 +42,7 @@ export function linkify(): void {
                 alert("Copied!");
             },
             function (err) {
-                alert(
-                    `Here's the link to copy:\n${link}`
-                );
+                alert(`Here's the link to copy:\n${link}`);
             }
         );
     }
