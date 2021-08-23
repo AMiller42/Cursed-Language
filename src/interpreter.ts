@@ -8,6 +8,8 @@ export function interpret(
 ) {
     let ast = parse(code);
     execAST(ast, inputs, flags);
+    
+    return "Not done yet, you sussy baka!";
 }
 
 function execAST(ast: ast.AST, inputs: string[], flags: string[]) {}
