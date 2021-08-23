@@ -2,10 +2,13 @@
 
 Try Ｃｕｒｓｅｄ out today in the [online interpreter](https://amiller42.github.io/Cursed-Language/)! (Disclaimer: Doesn't work yet; it'll work tomorrow.)
 
+Example program to demonstrate syntax: [Ｃｕｒｓｅｄ FizzBuzz](https://gist.github.com/AMiller42/7219aaca47cc01753084635c49d3b521)
+
 ## Confirmed <s>Bugs</s> Features
 
 **_Note: Potential features / features with missing details are marked with `(?)`_**
 
+-   There will be a golfy syntax and readable syntax for most things, which can be mixed together
 -   `Switch` statements instead of `if` statements, but instead of `break`, you have to use `goto`
 -   `While` loops that confirm that you actually want to break the loop
 -   `Four` loops that always execute four times
@@ -51,8 +54,6 @@ Try Ｃｕｒｓｅｄ out today in the [online interpreter](https://amiller42.g
 **Define an Array of Strings**
 
 `"''Hello''|''World\!''"`
-
-
 
 
 
